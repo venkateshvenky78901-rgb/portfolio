@@ -1,0 +1,1688 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Karnati Venkateswara Rao | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #050816;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* =========================
+   ANIMATED BACKGROUND
+========================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    background: #00eaff;
+    opacity: 0.08;
+    filter: blur(150px);
+    border-radius: 50%;
+    top: -150px;
+    left: -150px;
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    width: 450px;
+    height: 450px;
+    background: #8b5cf6;
+    opacity: 0.08;
+    filter: blur(150px);
+    border-radius: 50%;
+    bottom: -150px;
+    right: -150px;
+    z-index: -2;
+}
+
+.particles span {
+    position: fixed;
+    width: 5px;
+    height: 5px;
+    background: #00eaff;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #00eaff;
+    animation: particles 12s linear infinite;
+    z-index: -1;
+}
+
+.particles span:nth-child(1) { left: 10%; animation-delay: 0s; }
+.particles span:nth-child(2) { left: 25%; animation-delay: 2s; }
+.particles span:nth-child(3) { left: 40%; animation-delay: 4s; }
+.particles span:nth-child(4) { left: 60%; animation-delay: 1s; }
+.particles span:nth-child(5) { left: 75%; animation-delay: 3s; }
+.particles span:nth-child(6) { left: 90%; animation-delay: 5s; }
+
+@keyframes particles {
+    0% {
+        top: 100%;
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        top: -10%;
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(5, 8, 22, 0.75);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1200px;
+    height: 75px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    color: white;
+}
+
+.logo span {
+    color: #00eaff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: #00eaff;
+}
+
+.menu {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    width: 90%;
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 60px;
+    padding-top: 80px;
+}
+
+.hero-content {
+    max-width: 680px;
+}
+
+.welcome {
+    color: #00eaff;
+    letter-spacing: 4px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 75px);
+    line-height: 1.1;
+}
+
+.hero h1 span {
+    color: #00eaff;
+    text-shadow: 0 0 30px rgba(0,234,255,.4);
+}
+
+.hero h2 {
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.hero-text {
+    margin-top: 20px;
+    color: #a8b0c2;
+    line-height: 1.8;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 13px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+    display: inline-block;
+}
+
+.primary {
+    background: #00eaff;
+    color: #061018;
+    box-shadow: 0 0 25px rgba(0,234,255,.3);
+}
+
+.primary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 40px rgba(0,234,255,.7);
+}
+
+.secondary {
+    border: 1px solid #00eaff;
+    color: white;
+}
+
+.secondary:hover {
+    background: #00eaff;
+    color: #061018;
+}
+
+.socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.socials a {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    border: 1px solid #00eaff;
+
+    color: #00eaff;
+    text-decoration: none;
+
+    transition: .3s;
+}
+
+.socials a:hover {
+    background: #00eaff;
+    color: #061018;
+    transform: translateY(-5px);
+}
+
+
+/* =========================
+   PROFILE CARD
+========================= */
+
+.profile-card {
+    width: 350px;
+    height: 430px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,.03);
+
+    border: 1px solid rgba(0,234,255,.3);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 0 50px rgba(0,234,255,.1),
+        inset 0 0 40px rgba(0,234,255,.04);
+
+    animation: floating 4s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.profile-circle {
+    width: 250px;
+    height: 250px;
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    border: 2px solid #00eaff;
+
+    box-shadow:
+        0 0 30px #00eaff,
+        inset 0 0 30px rgba(0,234,255,.2);
+
+    animation: rotate 8s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.profile-content {
+    position: relative;
+    text-align: center;
+}
+
+.profile-icon {
+    width: 110px;
+    height: 110px;
+
+    margin: auto auto 20px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 45px;
+
+    color: #00eaff;
+
+    background: #091124;
+
+    border: 2px solid #00eaff;
+
+    box-shadow: 0 0 30px rgba(0,234,255,.4);
+}
+
+.profile-content h3 {
+    color: #00eaff;
+}
+
+.profile-content p {
+    color: #9ba5ba;
+    margin-top: 7px;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 110px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title p {
+    color: #00eaff;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.section-title h2 {
+    font-size: 42px;
+    margin-top: 8px;
+}
+
+.section-title span {
+    color: #00eaff;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.about-card {
+    padding: 30px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,.035);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    transition: .4s;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    border-color: #00eaff;
+    box-shadow: 0 15px 40px rgba(0,234,255,.1);
+}
+
+.about-card i {
+    font-size: 30px;
+    color: #00eaff;
+}
+
+.about-card h3 {
+    margin: 15px 0 8px;
+}
+
+.about-card p {
+    color: #9ba5ba;
+}
+
+.about-text {
+    grid-column: span 3;
+    margin-top: 20px;
+
+    color: #a8b0c2;
+
+    line-height: 1.9;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+.timeline {
+    max-width: 800px;
+    margin: auto;
+
+    border-left: 2px solid #00eaff;
+
+    padding-left: 35px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.timeline-dot {
+    position: absolute;
+
+    width: 15px;
+    height: 15px;
+
+    border-radius: 50%;
+
+    background: #00eaff;
+
+    left: -44px;
+    top: 30px;
+
+    box-shadow: 0 0 20px #00eaff;
+}
+
+.timeline-card {
+    padding: 30px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,.035);
+
+    border: 1px solid rgba(255,255,255,.08);
+}
+
+.timeline-card span {
+    color: #00eaff;
+    font-size: 13px;
+}
+
+.timeline-card h3 {
+    margin: 10px 0;
+}
+
+.timeline-card h4,
+.timeline-card p {
+    color: #9ba5ba;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-container {
+    max-width: 850px;
+    margin: auto;
+}
+
+.skill {
+    margin-bottom: 30px;
+}
+
+.skill-heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.skill-heading i {
+    color: #00eaff;
+}
+
+.skill-heading span {
+    color: #00eaff;
+}
+
+.progress {
+    height: 8px;
+
+    background: #151b2c;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+
+    background: #00eaff;
+
+    box-shadow: 0 0 15px #00eaff;
+
+    border-radius: 20px;
+
+    animation: progress 2s ease;
+}
+
+@keyframes progress {
+    from {
+        width: 0;
+    }
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.project-card {
+    padding: 35px;
+
+    border-radius: 22px;
+
+    background: rgba(255,255,255,.035);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    transition: .4s;
+}
+
+.project-card:hover {
+    transform: translateY(-12px);
+    border-color: #00eaff;
+    box-shadow: 0 20px 50px rgba(0,234,255,.12);
+}
+
+.project-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: rgba(0,234,255,.1);
+
+    color: #00eaff;
+
+    font-size: 25px;
+}
+
+.project-card h3 {
+    margin: 20px 0 10px;
+}
+
+.project-card p {
+    color: #9ba5ba;
+    line-height: 1.7;
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.tags span {
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    background: rgba(0,234,255,.1);
+
+    color: #00eaff;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact-info h3 {
+    font-size: 30px;
+}
+
+.contact-info > p {
+    color: #a8b0c2;
+    line-height: 1.8;
+    margin: 15px 0 30px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.contact-item i {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    color: #00eaff;
+
+    background: rgba(0,234,255,.1);
+}
+
+.contact-item small {
+    color: #00eaff;
+}
+
+.contact-item p {
+    color: #d0d6e2;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 16px;
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,.04);
+
+    border: 1px solid rgba(255,255,255,.1);
+
+    color: white;
+
+    outline: none;
+
+    font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #00eaff;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 30px 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top: 1px solid rgba(255,255,255,.08);
+}
+
+footer p {
+    color: #8993a8;
+    font-size: 13px;
+}
+
+.top {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #00eaff;
+
+    color: #071018;
+
+    text-decoration: none;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:850px) {
+
+    .nav-links {
+        position: absolute;
+
+        top: 75px;
+        right: -100%;
+
+        width: 250px;
+
+        padding: 30px;
+
+        flex-direction: column;
+
+        background: #0b1020;
+
+        transition: .4s;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 130px;
+    }
+
+    .buttons,
+    .socials {
+        justify-content: center;
+    }
+
+    .about-container,
+    .projects-container,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-text {
+        grid-column: span 1;
+    }
+
+    .profile-card {
+        width: 300px;
+        height: 380px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media(max-width:500px) {
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        text-align: center;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ANIMATED PARTICLES -->
+
+<div class="particles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header>
+
+<nav class="navbar">
+
+    <div class="logo">
+        KVR<span>.</span>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+
+        <li>
+            <a href="#home">Home</a>
+        </li>
+
+        <li>
+            <a href="#about">About</a>
+        </li>
+
+        <li>
+            <a href="#education">Education</a>
+        </li>
+
+        <li>
+            <a href="#skills">Skills</a>
+        </li>
+
+        <li>
+            <a href="#projects">Projects</a>
+        </li>
+
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+
+    </ul>
+
+    <div class="menu" id="menu">
+        <i class="fas fa-bars"></i>
+    </div>
+
+</nav>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+    <p class="welcome">
+        WELCOME TO MY PORTFOLIO
+    </p>
+
+    <h1>
+        Hi, I'm
+        <span>Karnati Venkateswara Rao</span>
+    </h1>
+
+    <h2>
+        B.Tech CSE Student
+    </h2>
+
+    <p class="hero-text">
+        I'm currently pursuing my 3rd year B.Tech in
+        Computer Science Engineering at Vignan University,
+        Vadlamudi. I am passionate about programming,
+        technology and building useful projects.
+    </p>
+
+    <div class="buttons">
+
+        <a href="#projects" class="btn primary">
+            View Projects
+        </a>
+
+        <a href="#contact" class="btn secondary">
+            Contact Me
+        </a>
+
+    </div>
+
+    <div class="socials">
+
+        <a href="mailto:venkateshvenky78901@gmail.com">
+            <i class="fas fa-envelope"></i>
+        </a>
+
+        <a href="tel:9949609963">
+            <i class="fas fa-phone"></i>
+        </a>
+
+        <a href="#">
+            <i class="fab fa-github"></i>
+        </a>
+
+        <a href="#">
+            <i class="fab fa-linkedin"></i>
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- PROFILE -->
+
+<div class="profile-card">
+
+    <div class="profile-circle"></div>
+
+    <div class="profile-content">
+
+        <div class="profile-icon">
+            <i class="fas fa-user"></i>
+        </div>
+
+        <h3>Karnati</h3>
+
+        <h2>Venkateswara Rao</h2>
+
+        <p>B.Tech CSE</p>
+
+        <p>Vignan University</p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="section" id="about">
+
+<div class="section-title">
+
+    <p>GET TO KNOW ME</p>
+
+    <h2>
+        About <span>Me</span>
+    </h2>
+
+</div>
+
+
+<div class="about-container">
+
+
+<div class="about-card">
+
+    <i class="fas fa-graduation-cap"></i>
+
+    <h3>Education</h3>
+
+    <p>
+        B.Tech Computer Science Engineering
+    </p>
+
+</div>
+
+
+<div class="about-card">
+
+    <i class="fas fa-code"></i>
+
+    <h3>Programming</h3>
+
+    <p>
+        Python, C and Java
+    </p>
+
+</div>
+
+
+<div class="about-card">
+
+    <i class="fas fa-database"></i>
+
+    <h3>Database</h3>
+
+    <p>
+        MySQL
+    </p>
+
+</div>
+
+
+<div class="about-text">
+
+    <p>
+        I am <strong>Karnati Venkateswara Rao</strong>,
+        currently pursuing my 3rd year B.Tech in
+        Computer Science Engineering at
+        <strong>Vignan University, Vadlamudi</strong>.
+    </p>
+
+    <br>
+
+    <p>
+        I enjoy learning programming languages,
+        developing applications and exploring
+        new technologies. My goal is to improve
+        my technical skills and build useful
+        real-world projects.
+    </p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     EDUCATION
+========================= -->
+
+<section class="section" id="education">
+
+<div class="section-title">
+
+    <p>MY ACADEMIC JOURNEY</p>
+
+    <h2>
+        My <span>Education</span>
+    </h2>
+
+</div>
+
+
+<div class="timeline">
+
+
+<div class="timeline-item">
+
+    <div class="timeline-dot"></div>
+
+    <div class="timeline-card">
+
+        <span>
+            CURRENTLY PURSUING
+        </span>
+
+        <h3>
+            B.Tech - Computer Science Engineering
+        </h3>
+
+        <h4>
+            Vignan University, Vadlamudi
+        </h4>
+
+        <p>
+            3rd Year | 3-1 Semester
+        </p>
+
+    </div>
+
+</div>
+
+
+<div class="timeline-item">
+
+    <div class="timeline-dot"></div>
+
+    <div class="timeline-card">
+
+        <span>
+            TECHNICAL EDUCATION
+        </span>
+
+        <h3>
+            Computer Science
+        </h3>
+
+        <p>
+            Building strong knowledge in programming,
+            databases, operating systems and
+            computer science fundamentals.
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section class="section" id="skills">
+
+<div class="section-title">
+
+    <p>MY TECHNICAL ABILITIES</p>
+
+    <h2>
+        My <span>Skills</span>
+    </h2>
+
+</div>
+
+
+<div class="skills-container">
+
+
+<div class="skill">
+
+    <div class="skill-heading">
+
+        <h3>
+            <i class="fab fa-python"></i>
+            Python
+        </h3>
+
+        <span>85%</span>
+
+    </div>
+
+    <div class="progress">
+
+        <div class="progress-bar"
+             style="width:85%">
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="skill">
+
+    <div class="skill-heading">
+
+        <h3>
+            <i class="fas fa-c"></i>
+            C
+        </h3>
+
+        <span>80%</span>
+
+    </div>
+
+    <div class="progress">
+
+        <div class="progress-bar"
+             style="width:80%">
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="skill">
+
+    <div class="skill-heading">
+
+        <h3>
+            <i class="fab fa-java"></i>
+            Java
+        </h3>
+
+        <span>75%</span>
+
+    </div>
+
+    <div class="progress">
+
+        <div class="progress-bar"
+             style="width:75%">
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="skill">
+
+    <div class="skill-heading">
+
+        <h3>
+            <i class="fas fa-desktop"></i>
+            Operating Systems
+        </h3>
+
+        <span>70%</span>
+
+    </div>
+
+    <div class="progress">
+
+        <div class="progress-bar"
+             style="width:70%">
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="skill">
+
+    <div class="skill-heading">
+
+        <h3>
+            <i class="fas fa-database"></i>
+            MySQL
+        </h3>
+
+        <span>80%</span>
+
+    </div>
+
+    <div class="progress">
+
+        <div class="progress-bar"
+             style="width:80%">
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section class="section" id="projects">
+
+<div class="section-title">
+
+    <p>WHAT I BUILD</p>
+
+    <h2>
+        My <span>Projects</span>
+    </h2>
+
+</div>
+
+
+<div class="projects-container">
+
+
+<div class="project-card">
+
+    <div class="project-icon">
+
+        <i class="fas fa-globe"></i>
+
+    </div>
+
+    <h3>
+        Personal Portfolio
+    </h3>
+
+    <p>
+        A modern responsive portfolio website
+        created using HTML, CSS and JavaScript.
+    </p>
+
+    <div class="tags">
+
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+
+    </div>
+
+</div>
+
+
+<div class="project-card">
+
+    <div class="project-icon">
+
+        <i class="fab fa-python"></i>
+
+    </div>
+
+    <h3>
+        Python Projects
+    </h3>
+
+    <p>
+        Beginner-friendly Python projects
+        demonstrating programming fundamentals
+        and problem-solving skills.
+    </p>
+
+    <div class="tags">
+
+        <span>Python</span>
+        <span>Programming</span>
+
+    </div>
+
+</div>
+
+
+<div class="project-card">
+
+    <div class="project-icon">
+
+        <i class="fas fa-database"></i>
+
+    </div>
+
+    <h3>
+        MySQL Database
+    </h3>
+
+    <p>
+        Database projects using SQL queries,
+        tables, relationships and data management.
+    </p>
+
+    <div class="tags">
+
+        <span>MySQL</span>
+        <span>SQL</span>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="section" id="contact">
+
+<div class="section-title">
+
+    <p>GET IN TOUCH</p>
+
+    <h2>
+        Contact <span>Me</span>
+    </h2>
+
+</div>
+
+
+<div class="contact-container">
+
+
+<div class="contact-info">
+
+    <h3>
+        Let's Connect
+    </h3>
+
+    <p>
+        Feel free to contact me for projects,
+        collaborations or professional opportunities.
+    </p>
+
+
+    <div class="contact-item">
+
+        <i class="fas fa-phone"></i>
+
+        <div>
+
+            <small>Phone</small>
+
+            <p>
+                9949609963
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="contact-item">
+
+        <i class="fas fa-envelope"></i>
+
+        <div>
+
+            <small>Email</small>
+
+            <p>
+                venkateshvenky78901@gmail.com
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="contact-item">
+
+        <i class="fas fa-university"></i>
+
+        <div>
+
+            <small>University</small>
+
+            <p>
+                Vignan University, Vadlamudi
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<form class="contact-form" id="contactForm">
+
+    <input
+        type="text"
+        placeholder="Your Name"
+        required
+    >
+
+    <input
+        type="email"
+        placeholder="Your Email"
+        required
+    >
+
+    <textarea
+        rows="6"
+        placeholder="Your Message"
+        required
+    ></textarea>
+
+    <button
+        type="submit"
+        class="btn primary"
+    >
+        Send Message
+        <i class="fas fa-paper-plane"></i>
+    </button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="logo">
+    KVR<span>.</span>
+</div>
+
+<p>
+    © 2026 Karnati Venkateswara Rao
+</p>
+
+<a href="#home" class="top">
+    <i class="fas fa-arrow-up"></i>
+</a>
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+/* MOBILE MENU */
+
+const menu = document.getElementById("menu");
+
+const navLinks = document.getElementById("navLinks");
+
+menu.addEventListener("click", function() {
+
+    navLinks.classList.toggle("active");
+
+    const icon = menu.querySelector("i");
+
+    if(navLinks.classList.contains("active")) {
+
+        icon.classList.remove("fa-bars");
+
+        icon.classList.add("fa-xmark");
+
+    } else {
+
+        icon.classList.remove("fa-xmark");
+
+        icon.classList.add("fa-bars");
+
+    }
+
+});
+
+
+/* CLOSE MOBILE MENU */
+
+document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+        navLinks.classList.remove("active");
+
+        const icon = menu.querySelector("i");
+
+        icon.classList.remove("fa-xmark");
+
+        icon.classList.add("fa-bars");
+
+    });
+
+});
+
+
+/* CONTACT FORM */
+
+document.getElementById("contactForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    alert(
+        "Thank you for contacting Karnati Venkateswara Rao!"
+    );
+
+    this.reset();
+
+});
+
+
+/* SCROLL REVEAL */
+
+const sections = document.querySelectorAll(".section");
+
+const observer = new IntersectionObserver(
+    function(entries) {
+
+        entries.forEach(function(entry) {
+
+            if(entry.isIntersecting) {
+
+                entry.target.style.opacity = "1";
+
+                entry.target.style.transform =
+                    "translateY(0)";
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.15
+    }
+);
+
+
+sections.forEach(function(section) {
+
+    section.style.opacity = "0";
+
+    section.style.transform = "translateY(40px)";
+
+    section.style.transition =
+        "opacity .8s ease, transform .8s ease";
+
+    observer.observe(section);
+
+});
+
+</script>
+
+</body>
+</html>
+```
